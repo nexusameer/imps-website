@@ -21,22 +21,8 @@
         <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
         <li class="nav-item"><a href="course.html" class="nav-link">Courses</a></li>
-        <!-- <li class="nav-item"><a href="teacher.html" class="nav-link">Our Teachers</a></li> -->
-        <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
-
-<script>
-  // Simple script to set active menu item dynamically
-  $(document).ready(function () {
-    var path = window.location.pathname.split("/").pop();
-    if (path == '') {
-      path = 'index.html';
-    }
-    $('#ftco-nav .nav-item').removeClass('active');
-    $('#ftco-nav .nav-item a[href="' + path + '"]').parent().addClass('active');
-  });
-</script>

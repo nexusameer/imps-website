@@ -239,6 +239,28 @@ img.rounded {
   line-height: 1;
 }
 
+#section-counter .text .counter-value {
+  display: inline-flex !important;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.06em;
+}
+
+#section-counter .text .counter-value .number,
+#section-counter .text .counter-value .counter-suffix {
+  display: inline-block !important;
+  color: #fff !important;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1;
+  margin: 0 !important;
+}
+
+#section-counter .text .counter-value .counter-suffix {
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
 #section-counter .text span {
   font-size: 0.95rem;
   font-weight: 700;

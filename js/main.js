@@ -11,6 +11,13 @@
 	$(document).ready(function(){
 		if ($('#navbar-placeholder').length) {
 			$('#navbar-placeholder').load('navbar.html?v=' + new Date().getTime(), function() {
+				var path = window.location.pathname.split('/').pop();
+				if (path === '') {
+					path = 'index.html';
+				}
+				$('#ftco-nav .nav-item').removeClass('active');
+				$('#ftco-nav .nav-item a[href="' + path + '"]').parent().addClass('active');
+
 				// Rebind dropdown hover events for dynamically loaded navbar
 				$('nav .dropdown').hover(function(){
 					var $this = $(this);
@@ -41,7 +48,9 @@
 			});
 		}
 		if ($('#footer-placeholder').length) {
-			$('#footer-placeholder').load('footer.html?v=' + new Date().getTime());
+			$('#footer-placeholder').load('footer.html?v=' + new Date().getTime(), function() {
+				$('.current-year').text(new Date().getFullYear());
+			});
 		}
 	});
 
