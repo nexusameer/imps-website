@@ -18,25 +18,6 @@ body {
   letter-spacing: -0.01em;
 }
 
-/* Global content justification */
-p,
-li,
-.lead,
-.text,
-.media-body p,
-.course p,
-.services p,
-.blog-entry p,
-.testimony-wrap p,
-.contact-intro p,
-.contact-card p,
-.contact-side-body p,
-.block-23 ul li .text,
-.ftco-footer p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
 h1, h2, h3, h4, h5, h6, .heading {
   color: var(--secondary) !important;
   font-weight: 800;
@@ -79,7 +60,7 @@ h1, h2, h3, h4, h5, h6, .heading {
 
 /* Floating Pill Navbar */
 .ftco-navbar-light {
-  background: linear-gradient(180deg, rgba(196, 216, 249, 0.98), rgba(228, 240, 255, 0.95)) !important;
+  background: var(--glass-bg) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--clay-shadow);
@@ -104,7 +85,6 @@ h1, h2, h3, h4, h5, h6, .heading {
   border-radius: var(--border-radius-pill);
   box-shadow: 0 15px 30px rgba(11, 14, 55, 0.1);
   margin-top: 0 !important;
-  background: linear-gradient(180deg, rgba(178, 204, 245, 0.98), rgba(218, 236, 255, 0.95)) !important;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
@@ -251,15 +231,6 @@ img.rounded {
   color: #fff !important;
   margin-bottom: 0px !important;
   display: block;
-}
-
-#section-counter .text,
-#section-counter .text span,
-#section-counter .text .number,
-#section-counter .text .counter-value,
-#section-counter .text .counter-value .counter-suffix {
-  text-align: center !important;
-  text-justify: auto !important;
 }
 
 #section-counter .text .number {
@@ -418,11 +389,11 @@ textarea {
     font-size: 1.1rem !important;
   }
 
-  .ftco-navbar-light .navbar-brand > div:last-child > span:first-child {
+  .ftco-navbar-light .navbar-brand span:first-child {
     font-size: 1.3rem !important;
   }
 
-  .ftco-navbar-light .navbar-brand > div:last-child > span:last-child {
+  .ftco-navbar-light .navbar-brand span:last-child {
     font-size: 0.5rem !important;
     letter-spacing: 1.5px !important;
   }
@@ -580,11 +551,11 @@ textarea {
     margin-right: 8px !important;
   }
 
-  .ftco-navbar-light .navbar-brand > div:last-child > span:first-child {
+  .ftco-navbar-light .navbar-brand span:first-child {
     font-size: 1.1rem !important;
   }
 
-  .ftco-navbar-light .navbar-brand > div:last-child > span:last-child {
+  .ftco-navbar-light .navbar-brand span:last-child {
     font-size: 0.45rem !important;
     letter-spacing: 1px !important;
   }
@@ -657,766 +628,69 @@ textarea {
   }
 }
 
-/* Additional cross-page responsive hardening */
-.nav-toggle-icon {
-  width: 20px;
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  margin-right: 0;
-  flex-shrink: 0;
-}
-
-.nav-toggle-icon span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  border-radius: 999px;
-  background: var(--secondary);
-  transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.navbar-toggler[aria-expanded="true"] .nav-toggle-icon span:nth-child(1) {
-  transform: translateY(6px) rotate(45deg);
-}
-
-.navbar-toggler[aria-expanded="true"] .nav-toggle-icon span:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-toggler[aria-expanded="true"] .nav-toggle-icon span:nth-child(3) {
-  transform: translateY(-6px) rotate(-45deg);
-}
-
-.nav-toggle-label {
-  font-size: 0.8rem;
-  letter-spacing: 0.4px;
-  line-height: 1;
-  display: inline-block;
-  flex-shrink: 0;
-  transform: translateY(-1px);
-}
-
-@media (max-width: 991.98px) {
-  .ftco-navbar-light .navbar-toggler {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    line-height: 1;
-  }
-}
-
-@media (min-width: 992px) {
-  .ftco-navbar-light .navbar-toggler {
-    display: none !important;
-  }
-}
-
-.hero-wrap,
-.hero-wrap .slider-text {
-  width: 100%;
-}
-
-.hero-wrap.video-hero {
-  background-repeat: no-repeat;
-}
-
-.hero-wrap .slider-text h1,
-.hero-wrap .slider-text .bread,
-.heading-section h2,
-.heading-section h3 {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-.ftco-section .row > [class*="col-"] {
-  margin-bottom: 1.5rem;
-}
-
-.ftco-section .row > [class*="col-"]:last-child {
-  margin-bottom: 0;
-}
-
-.ftco-section ul {
-  padding-left: 1.2rem;
-}
-
-.course .img,
-.blog-entry .block-20 {
-  min-height: 220px;
-  background-position: center;
-  background-size: cover;
-}
-
-.testimony-wrap {
-  height: 100%;
-}
-
-.ftco-footer {
-  padding-top: 4rem !important;
-  padding-bottom: 2rem !important;
-}
-
-.ftco-footer .row {
-  row-gap: 0.5rem;
-}
-
-.ftco-footer .ftco-footer-widget {
-  margin-bottom: 1rem;
-}
-
-.ftco-footer .border-top {
-  margin-top: 1rem !important;
-  padding-top: 1rem !important;
-}
-
-.block-23 ul li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.65rem;
-}
-
-.block-23 ul li .icon {
-  margin-top: 0.15rem;
-}
-
-.block-23 ul li .text {
-  overflow-wrap: anywhere;
-}
-
-.table-responsive,
-.table-responsive-sm,
-.table-responsive-md,
-.table-responsive-lg,
-.table-responsive-xl {
-  border-radius: 12px;
-}
-
-@media (max-width: 1024px) {
-  .hero-wrap.video-hero {
-    background-attachment: scroll !important;
-  }
-
-  .hero-wrap .slider-text h1,
-  .hero-wrap .slider-text .bread {
-    line-height: 1.2;
-  }
-
-  .course .img,
-  .blog-entry .block-20 {
-    min-height: 200px;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 15px;
-    line-height: 1.65;
-  }
-
-  .hero-wrap .slider-text .btn + .btn {
-    margin-top: 0.5rem;
-  }
-
-  .hero-wrap .slider-text p small {
-    display: inline-block;
-    margin-top: 0.45rem;
-    line-height: 1.55;
-  }
-
-  .ftco-section .row > [class*="col-"] {
-    margin-bottom: 1.1rem;
-  }
-
-  .ftco-footer .col-md-5,
-  .ftco-footer .col-md-4,
-  .ftco-footer .col-md-3 {
-    margin-bottom: 0.65rem !important;
-  }
-
-  .block-23 ul {
-    padding-left: 0;
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-toggle-label {
-    font-size: 0.74rem;
-  }
-
-  .hero-wrap.video-hero .slider-text {
-    padding-top: 96px;
-  }
-
-  .hero-wrap .slider-text p.lead {
-    font-size: 0.88rem;
-  }
-
-  .course .img,
-  .blog-entry .block-20 {
-    min-height: 180px;
-  }
-
-  .ftco-footer {
-    padding-top: 3rem !important;
-    padding-bottom: 1.5rem !important;
-  }
-}
-
-/* Page-specific responsive refinements */
-.home-page .hero-wrap .slider-text .col-md-9 {
-  max-width: 920px;
-}
-
-.home-page .course p,
-.home-page .services p,
-.home-page .blog-entry p {
-  overflow-wrap: anywhere;
-}
-
-.home-page .course.p-5 {
-  padding: clamp(1.1rem, 3vw, 3rem) !important;
-}
-
-.home-page .lead {
-  line-height: 1.75;
-}
-
-.about-page .ftco-section.pb-5.pt-5 {
-  padding-top: 4.5em !important;
-}
-
-.about-page .ftco-section .mt-5 {
-  margin-top: 1.75rem !important;
-}
-
-.about-page .ftco-section img.img-fluid {
-  margin-bottom: 2rem;
-}
-
-.about-page .lead {
-  font-size: clamp(0.98rem, 2vw, 1.1rem) !important;
-  line-height: 1.75 !important;
-}
-
-.about-page .testimony-wrap .text p {
-  font-size: clamp(0.92rem, 2vw, 1.08rem) !important;
-  line-height: 1.68 !important;
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-
-.about-page .testimony-wrap .name {
-  font-size: clamp(1rem, 2.2vw, 1.2rem) !important;
-}
-
-.course-page .course-badge {
-  font-size: clamp(0.9rem, 1.6vw, 1.25rem) !important;
-  padding: 0.8em 1.65em !important;
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.course-page .ftco-section .mt-5 {
-  margin-top: 1.25rem !important;
-}
-
-.course-page .ftco-section {
-  padding-bottom: 4.5em;
-}
-
-.contact-page .hero-wrap.hero-wrap-2 {
-  margin-bottom: 0;
-}
-
-.contact-page .contact-card p,
-.contact-page .contact-card a,
-.contact-page .contact-side-body p,
-.contact-page .contact-links a {
-  overflow-wrap: anywhere;
-}
-
-@media (max-width: 1024px) {
-  .home-page .hero-wrap.video-hero {
-    min-height: 640px;
-  }
-
-  .about-page .ftco-section.pb-5.pt-5 {
-    padding-top: 3.7em !important;
-  }
-
-  .about-page .testimony-wrap {
-    min-height: 260px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-page .hero-wrap .slider-text .col-md-9 {
-    max-width: 100%;
-  }
-
-  .home-page .course.p-5,
-  .home-page .course.p-4.p-md-5 {
-    padding: 1.05rem !important;
-  }
-
-  .home-page .counter-wrap .block-18 {
-    padding-top: 1rem !important;
-    padding-bottom: 1rem !important;
-  }
-
-  .about-page .ftco-section .mt-5 {
-    margin-top: 0.7rem !important;
-  }
-
-  .about-page .pl-md-5 {
-    padding-left: 15px !important;
-  }
-
-  .about-page .ftco-section img.img-fluid {
-    margin-bottom: 1.35rem;
-  }
-
-  .about-page .testimony-wrap {
-    min-height: 220px !important;
-    padding: 1.25em 1em !important;
-  }
-
-  .course-page .course-badge {
-    width: 100%;
-    margin: 0.35em 0 !important;
-    border-radius: 16px !important;
-  }
-
-  .contact-page .contact-section {
-    padding-top: 3.7em;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-page .hero-wrap.video-hero {
-    min-height: 520px;
-  }
-
-  .home-page .hero-wrap .slider-text .btn {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  .home-page .course.p-5,
-  .home-page .course.p-4.p-md-5 {
-    padding: 0.95rem !important;
-  }
-
-  .home-page .icon-wrap {
-    width: 62px !important;
-    height: 62px !important;
-  }
-
-  .home-page .icon-wrap span {
-    font-size: 1.85rem !important;
-  }
-
-  .about-page .ftco-section.pb-5.pt-5 {
-    padding-top: 3.2em !important;
-  }
-
-  .about-page .ftco-section img.img-fluid {
-    margin-bottom: 1.5rem;
-  }
-
-  .about-page .testimony-wrap {
-    min-height: 190px !important;
-    border-radius: 16px !important;
-    padding: 1em 0.8em !important;
-  }
-
-  .course-page .ftco-section .mt-5 {
-    margin-top: 0.45rem !important;
-  }
-
-  .course-page .course-badge {
-    font-size: 0.88rem !important;
-    padding: 0.75em 1em !important;
-  }
-
-  .contact-page .contact-section {
-    padding-top: 3.2em;
-  }
-}
-
-/* Final QA responsive safeguards */
-.footer-modern {
-  padding-top: 3.25rem !important;
-  padding-bottom: 1.5rem !important;
-}
-
-.footer-modern .footer-col {
-  margin-bottom: 1rem !important;
-}
-
-.footer-modern .ftco-footer-widget {
-  margin-bottom: 0.5rem !important;
-}
-
-.footer-modern .ftco-heading-2 {
-  margin-bottom: 0.85rem !important;
-}
-
-.footer-modern p {
-  margin-bottom: 0.85rem;
-}
-
-.footer-modern .list-unstyled {
-  margin: 0;
-  padding: 0;
-}
-
-.footer-modern .list-unstyled li {
-  margin-bottom: 0.2rem;
-}
-
-.footer-modern .list-unstyled li a {
-  padding-top: 0.35rem !important;
+/* Ultra-compact footer override */
+.ftco-footer.footer-modern {
+  padding-top: 0.9rem !important;
   padding-bottom: 0.35rem !important;
 }
 
-.footer-modern .ftco-footer-social {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
+.ftco-footer.footer-modern .footer-col,
+.ftco-footer.footer-modern .ftco-footer-widget {
+  margin-bottom: 0.1rem !important;
 }
 
-.footer-modern .footer-bottom-row {
-  margin-top: 0.75rem !important;
-  padding-top: 0.9rem !important;
-}
-
-.ftco-navbar-light .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.ftco-navbar-light .navbar-brand {
-  overflow: hidden;
-}
-
-.hero-wrap.hero-wrap-2 {
-  background-repeat: no-repeat;
-}
-
-.table-responsive {
-  -webkit-overflow-scrolling: touch;
-}
-
-input,
-select,
-textarea,
-button {
-  font-size: 16px;
-}
-
-@media (max-width: 1024px) {
-  .hero-wrap.hero-wrap-2 {
-    min-height: 420px;
-    height: auto;
-  }
-
-  .hero-wrap.hero-wrap-2 .slider-text {
-    min-height: 420px;
-    height: auto;
-    padding-top: 80px;
-    padding-bottom: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .ftco-navbar-light,
-  .ftco-navbar-light.scrolled {
-    position: sticky !important;
-    top: 0 !important;
-    left: 0;
-    right: 0;
-    max-width: 100% !important;
-    margin: 0 !important;
-    border-radius: 0 0 16px 16px !important;
-    z-index: 1000;
-  }
-
-  .ftco-navbar-light .container {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .hero-wrap.hero-wrap-2 {
-    min-height: 360px;
-  }
-
-  .hero-wrap.hero-wrap-2 .slider-text {
-    min-height: 360px;
-    padding-top: 86px;
-    padding-bottom: 32px;
-  }
-
-  .ftco-footer .ftco-footer-social a {
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-  }
-
-  .footer-modern {
-    padding-top: 2.25rem !important;
-    padding-bottom: 1rem !important;
-  }
-
-  .footer-modern .footer-col {
-    margin-bottom: 0.4rem !important;
-  }
-
-  .footer-modern .ftco-heading-2 {
-    margin-bottom: 0.6rem !important;
-    font-size: 1.1rem !important;
-  }
-
-  .footer-modern .ftco-footer-widget p {
-    line-height: 1.55;
-    margin-bottom: 0.45rem !important;
-  }
-
-  .footer-modern .block-23 ul li {
-    margin-bottom: 0.45rem;
-  }
-
-  .footer-modern .footer-bottom-row {
-    margin-top: 0.5rem !important;
-    padding-top: 0.7rem !important;
-  }
-
-  .footer-modern .row {
-    row-gap: 0.15rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-wrap.hero-wrap-2 {
-    min-height: 300px;
-  }
-
-  .hero-wrap.hero-wrap-2 .slider-text {
-    min-height: 300px;
-    padding-top: 78px;
-    padding-bottom: 22px;
-  }
-
-  .home-page #section-counter .block-18 {
-    padding-top: 0.7rem !important;
-    padding-bottom: 0.7rem !important;
-  }
-
-  .ftco-navbar-light .navbar-brand {
-    max-width: calc(100% - 90px);
-  }
-
-  .footer-modern .ftco-footer-widget p,
-  .footer-modern .block-23 ul li .text,
-  .footer-modern .list-unstyled li a {
-    font-size: 0.95rem;
-  }
-
-  .footer-modern .footer-col {
-    margin-bottom: 0.1rem !important;
-  }
-
-  .footer-modern .ftco-footer-social {
-    margin-top: 0.35rem !important;
-    margin-bottom: 0.15rem !important;
-  }
-
-  .footer-modern .ftco-heading-2 {
-    margin-top: 0.15rem;
-    margin-bottom: 0.45rem !important;
-  }
-}
-
-/* Breadcrumb alignment fix on inner hero sections */
-.hero-wrap .breadcrumbs {
-  width: 100%;
-  text-align: center !important;
-}
-
-@media (max-width: 768px) {
-  .about-page .ftco-section.pb-5.pt-5 .row.d-flex.align-items-center {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about-page .ftco-section.pb-5.pt-5 .row.d-flex.align-items-center > .col-md-7 {
-    order: 1;
-  }
-
-  .about-page .ftco-section.pb-5.pt-5 .row.d-flex.align-items-center > .col-md-5 {
-    order: 2;
-  }
-
-  .hero-wrap.hero-wrap-2 .breadcrumbs {
-    margin-bottom: 0.6rem !important;
-    letter-spacing: 0.5px;
-    text-align: center !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-wrap.hero-wrap-2 .breadcrumbs {
-    margin-bottom: 0.45rem !important;
-    font-size: 0.72rem !important;
-    line-height: 1.4;
-    text-align: center !important;
-  }
-}
-
-/* About page testimonials cleanup */
-.about-page .testimony-section {
-  padding-top: 3.8em !important;
-  padding-bottom: 3.2em !important;
-}
-
-.about-page .testimony-section .heading-section {
-  margin-bottom: 1.6rem !important;
-  padding-bottom: 0 !important;
-}
-
-.about-page .testimony-section .row.justify-content-center.mb-5.pb-3 {
-  margin-bottom: 0.9rem !important;
-  padding-bottom: 0 !important;
-}
-
-.about-page .testimony-section .carousel-testimony .item {
-  padding: 0.1rem 0.15rem 0.2rem;
-}
-
-.about-page .testimony-section .testimony-wrap {
-  min-height: 250px !important;
-  border-radius: 16px !important;
-  padding: 1.3rem 1.1rem !important;
-  box-shadow: 0 10px 25px rgba(11, 14, 55, 0.08) !important;
-}
-
-.about-page .testimony-section .testimony-wrap .text p {
-  margin-bottom: 1rem !important;
-}
-
-.about-page .testimony-section .owl-dots {
-  margin-top: 0.15rem !important;
-  margin-bottom: 0 !important;
-  padding-top: 0 !important;
-  line-height: 1;
-}
-
-.about-page .testimony-section .owl-dot span {
-  width: 10px !important;
-  height: 10px !important;
-  margin: 4px !important;
-  background: rgba(11, 14, 55, 0.28) !important;
-}
-
-.about-page .testimony-section .owl-dot.active span {
-  width: 24px !important;
-  border-radius: 999px !important;
-  background: var(--secondary) !important;
-}
-
-.about-page .testimony-section .testimony-wrap .name {
-  margin-bottom: 0.25rem !important;
-  line-height: 1.35;
-}
-
-.about-page .testimony-section .testimony-wrap .position {
-  display: block;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  line-height: 1.35;
+.ftco-footer.footer-modern .ftco-heading-2 {
+  margin-bottom: 0.22rem !important;
   font-size: 1rem !important;
 }
 
+.ftco-footer.footer-modern p {
+  margin-bottom: 0.18rem !important;
+  line-height: 1.35 !important;
+  font-size: 0.9rem;
+}
+
+.ftco-footer.footer-modern .list-unstyled li {
+  margin-bottom: 0 !important;
+}
+
+.ftco-footer.footer-modern .list-unstyled li a {
+  padding-top: 0.1rem !important;
+  padding-bottom: 0.1rem !important;
+  line-height: 1.25 !important;
+}
+
+.ftco-footer.footer-modern .ftco-footer-social {
+  margin-top: 0.1rem !important;
+  margin-bottom: 0.05rem !important;
+  gap: 0.35rem;
+}
+
+.ftco-footer.footer-modern .row.border-top {
+  margin-top: 0.2rem !important;
+  padding-top: 0.22rem !important;
+}
+
 @media (max-width: 768px) {
-  .about-page .testimony-section {
-    padding-top: 3.1em !important;
-    padding-bottom: 2.6em !important;
+  .ftco-footer.footer-modern {
+    padding-top: 0.7rem !important;
+    padding-bottom: 0.2rem !important;
   }
 
-  .about-page .testimony-section .heading-section {
-    margin-bottom: 1.1rem !important;
-  }
-
-  .about-page .testimony-section .row.justify-content-center.mb-5.pb-3 {
-    margin-bottom: 0.75rem !important;
-  }
-
-  .about-page .testimony-section .testimony-wrap {
-    min-height: 220px !important;
-    padding: 1.15rem 0.95rem !important;
-  }
-
-  .about-page .testimony-section .owl-dots {
-    margin-top: 0 !important;
+  .ftco-footer.footer-modern p,
+  .ftco-footer.footer-modern .list-unstyled li a,
+  .ftco-footer.footer-modern .block-23 .text {
+    font-size: 0.84rem !important;
   }
 }
 
 @media (max-width: 480px) {
-  .about-page .testimony-section {
-    padding-top: 2.2em !important;
-    padding-bottom: 1.3em !important;
+  .ftco-footer.footer-modern {
+    padding-top: 0.55rem !important;
+    padding-bottom: 0.12rem !important;
   }
 
-  .about-page .testimony-section .heading-section h2 {
-    font-size: 2rem !important;
-    margin-bottom: 0.3rem !important;
-  }
-
-  .about-page .testimony-section .row.justify-content-center.mb-5.pb-3 {
-    margin-bottom: 0.55rem !important;
-  }
-
-  .about-page .testimony-section .testimony-wrap {
-    min-height: 0 !important;
-    height: auto !important;
-    border-radius: 14px !important;
-    padding: 1rem 0.85rem !important;
-  }
-
-  .about-page .testimony-section .testimony-wrap .text p {
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 0.7rem !important;
-  }
-
-  .about-page .testimony-section .testimony-wrap .name {
-    font-size: 1.05rem !important;
-    margin-bottom: 0.15rem !important;
-  }
-
-  .about-page .testimony-section .testimony-wrap .position {
+  .ftco-footer.footer-modern .ftco-heading-2 {
     font-size: 0.92rem !important;
-  }
-
-  .about-page .testimony-section .owl-dot span {
-    width: 8px !important;
-    height: 8px !important;
-    margin: 3px !important;
-  }
-
-  .about-page .testimony-section .owl-dot.active span {
-    width: 18px !important;
-  }
-
-  .about-page .testimony-section .owl-dots {
-    margin-top: -0.2rem !important;
   }
 }
