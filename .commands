@@ -1,1 +1,4 @@
+git add .
+git commit -m "about changed"
 GIT_SSH_COMMAND="ssh -i ~/.ssh/ameer" git push origin main
+python3 -m http.server 8000

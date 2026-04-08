@@ -200,10 +200,28 @@ h1, h2, h3, h4, h5, h6, .heading {
   font-weight: 500;
 }
 
-/* About page content justification only */
-.about-page p,
-.about-page li {
+/* Site-wide content justification */
+p,
+li,
+.lead,
+.text,
+.media-body p,
+.course p,
+.services p,
+.blog-entry p,
+.contact-intro p,
+.contact-card p,
+.contact-side-body p,
+.block-23 ul li .text,
+.ftco-footer p {
   text-align: justify;
+  text-justify: inter-word;
+}
+
+/* Ensure index About section is justified */
+.index-about-content p,
+.index-about-content li {
+  text-align: justify !important;
   text-justify: inter-word;
 }
 
