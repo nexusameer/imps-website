@@ -60,10 +60,11 @@ h1, h2, h3, h4, h5, h6, .heading {
 
 /* Floating Pill Navbar */
 .ftco-navbar-light {
-  background: var(--glass-bg) !important;
+  background: var(--secondary) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--clay-shadow);
+  border: 1px solid rgba(120, 153, 214, 0.22);
   border-radius: var(--border-radius-pill);
   margin: 20px auto !important;
   max-width: 95%;
@@ -85,10 +86,11 @@ h1, h2, h3, h4, h5, h6, .heading {
   border-radius: var(--border-radius-pill);
   box-shadow: 0 15px 30px rgba(11, 14, 55, 0.1);
   margin-top: 0 !important;
+  background: var(--secondary) !important;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-  color: var(--secondary) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -100,8 +102,13 @@ h1, h2, h3, h4, h5, h6, .heading {
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover,
 .ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
-  background-color: var(--primary) !important;
+  background: linear-gradient(135deg, #e04e9f, #c93b8a) !important;
   color: #fff !important;
+}
+
+.ftco-navbar-light .navbar-brand > div:last-child > span:first-child,
+.ftco-navbar-light .navbar-brand > div:last-child > span:last-child {
+  color: rgba(255, 255, 255, 0.95) !important;
 }
 
 /* Navbar Brand Logo */
@@ -127,6 +134,48 @@ h1, h2, h3, h4, h5, h6, .heading {
   background: rgba(244, 245, 247, 0.7) !important; 
 }
 
+/* Match inner-page hero tone with homepage */
+.hero-wrap.hero-wrap-2 .overlay {
+  opacity: 1 !important;
+  background: rgb(142 152 172 / 72%) !important;
+}
+
+.hero-wrap.hero-wrap-2 .slider-text {
+  height: 100%;
+  min-height: inherit;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 280px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.hero-wrap.hero-wrap-2 .slider-text,
+.hero-wrap.hero-wrap-2 .slider-text p,
+.hero-wrap.hero-wrap-2 .slider-text .breadcrumbs,
+.hero-wrap.hero-wrap-2 .slider-text .breadcrumbs span,
+.hero-wrap.hero-wrap-2 .slider-text .breadcrumbs span a,
+.hero-wrap.hero-wrap-2 .slider-text .bread {
+  color: var(--secondary) !important;
+}
+
+.hero-wrap.hero-wrap-2 .slider-text .breadcrumbs span {
+  border-bottom-color: rgba(11, 14, 55, 0.16) !important;
+}
+
+.hero-wrap.hero-wrap-2 .breadcrumbs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero-wrap.video-hero .bg-video {
   position: absolute;
   top: 50%;
@@ -149,6 +198,13 @@ h1, h2, h3, h4, h5, h6, .heading {
 .hero-wrap .slider-text p.lead {
   color: var(--secondary) !important;
   font-weight: 500;
+}
+
+/* About page content justification only */
+.about-page p,
+.about-page li {
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* Claymorphic Cards */
@@ -364,6 +420,11 @@ textarea {
 
 /* 768 and below */
 @media (max-width: 768px) {
+  .hero-wrap.hero-wrap-2 .slider-text {
+    padding-top: 118px;
+    padding-bottom: 28px;
+  }
+
   .container {
     padding-left: 18px;
     padding-right: 18px;
@@ -523,6 +584,11 @@ textarea {
 
 /* 480 and below */
 @media (max-width: 480px) {
+  .hero-wrap.hero-wrap-2 .slider-text {
+    padding-top: 102px;
+    padding-bottom: 20px;
+  }
+
   .container {
     padding-left: 14px;
     padding-right: 14px;
