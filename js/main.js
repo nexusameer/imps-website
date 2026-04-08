@@ -18,6 +18,13 @@
 				$('#ftco-nav .nav-item').removeClass('active');
 				$('#ftco-nav .nav-item a[href="' + path + '"]').parent().addClass('active');
 
+				// Improve mobile usability by closing the expanded menu after selecting a nav link.
+				$('#ftco-nav .nav-link').on('click', function() {
+					if ($('.navbar-toggler').is(':visible') && $('#ftco-nav').hasClass('show')) {
+						$('.navbar-toggler').trigger('click');
+					}
+				});
+
 				// Rebind dropdown hover events for dynamically loaded navbar
 				$('nav .dropdown').hover(function(){
 					var $this = $(this);

@@ -269,3 +269,361 @@ img.rounded {
   color: rgba(255,255,255,0.9) !important;
   margin-top: 10px;
 }
+
+/* Global responsive safety */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+.btn,
+button,
+input[type="submit"],
+input[type="button"] {
+  min-height: 44px;
+}
+
+.form-control,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+.ftco-section {
+  overflow: hidden;
+}
+
+/* Shared navbar improvements */
+.ftco-navbar-light .navbar-brand {
+  min-width: 0;
+}
+
+.ftco-navbar-light .navbar-toggler {
+  border: 0;
+  border-radius: 14px;
+  padding: 0.5rem 0.8rem;
+  background: rgba(11, 14, 55, 0.06);
+  font-weight: 700;
+}
+
+.ftco-navbar-light .navbar-collapse {
+  transition: all 0.25s ease;
+}
+
+/* Counter consistency */
+#section-counter .counter-wrap {
+  margin-bottom: 1.25rem;
+}
+
+#section-counter .block-18 {
+  width: 100%;
+}
+
+/* 1024 and below */
+@media (max-width: 1024px) {
+  .ftco-section {
+    padding: 4.5em 0;
+  }
+
+  .hero-wrap.video-hero {
+    min-height: 680px;
+  }
+
+  .hero-wrap .slider-text h1 {
+    font-size: clamp(2rem, 4.8vw, 3.2rem);
+  }
+
+  .hero-wrap .slider-text p.lead {
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+  }
+
+  #section-counter .text .number,
+  #section-counter .text .counter-value .number,
+  #section-counter .text .counter-value .counter-suffix {
+    font-size: clamp(2.1rem, 5vw, 3rem);
+  }
+
+  .ftco-footer {
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+  }
+}
+
+/* 768 and below */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .ftco-navbar-light,
+  .ftco-navbar-light.scrolled {
+    max-width: calc(100% - 20px);
+    margin: 10px auto !important;
+    padding: 8px 12px;
+    border-radius: 20px;
+  }
+
+  .ftco-navbar-light .navbar-brand {
+    max-width: calc(100% - 78px);
+  }
+
+  .ftco-navbar-light .navbar-brand > div:first-child {
+    width: 42px !important;
+    height: 42px !important;
+    margin-right: 10px !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .ftco-navbar-light .navbar-brand span:first-child {
+    font-size: 1.3rem !important;
+  }
+
+  .ftco-navbar-light .navbar-brand span:last-child {
+    font-size: 0.5rem !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .ftco-navbar-light .navbar-collapse {
+    margin-top: 0.75rem;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 16px;
+    padding: 0.5rem;
+    box-shadow: 0 10px 24px rgba(11, 14, 55, 0.1);
+  }
+
+  .ftco-navbar-light .navbar-nav {
+    gap: 0.2rem;
+  }
+
+  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    font-size: 0.82rem;
+    padding: 12px 14px !important;
+    display: block;
+  }
+
+  .hero-wrap.video-hero {
+    min-height: 610px;
+    height: auto;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
+  .hero-wrap.video-hero .slider-text {
+    padding-top: 120px;
+    padding-bottom: 70px;
+  }
+
+  .hero-wrap.hero-wrap-2 {
+    height: 430px;
+  }
+
+  .hero-wrap.hero-wrap-2 .slider-text {
+    height: 430px;
+  }
+
+  .hero-wrap .slider-text h1 {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+    line-height: 1.18;
+  }
+
+  .hero-wrap .slider-text p,
+  .hero-wrap .slider-text p.lead {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .hero-wrap .slider-text p .btn,
+  .hero-wrap .slider-text .btn {
+    width: 100%;
+    margin: 0.35rem 0 !important;
+  }
+
+  .course,
+  .services,
+  .blog-entry,
+  .staff {
+    border-radius: 18px !important;
+  }
+
+  .icon-wrap {
+    width: 74px !important;
+    height: 74px !important;
+  }
+
+  .icon-wrap span {
+    font-size: 2.2rem !important;
+  }
+
+  .course-badge {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem !important;
+    padding: 0.85em 1.2em !important;
+    margin: 0.35em 0 !important;
+    border-radius: 18px !important;
+  }
+
+  #section-counter {
+    padding: 2.8em 0 1.8em;
+  }
+
+  #section-counter .counter-wrap {
+    margin-bottom: 1.75rem;
+  }
+
+  #section-counter .text {
+    text-align: center;
+  }
+
+  #section-counter .text span {
+    letter-spacing: 1px;
+    font-size: 0.82rem;
+  }
+
+  .ftco-footer {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    padding-top: 3.5rem !important;
+    padding-bottom: 2.25rem !important;
+  }
+
+  .ftco-footer .ftco-footer-widget {
+    margin-bottom: 1.5rem;
+  }
+
+  .ftco-footer .ml-md-4 {
+    margin-left: 0 !important;
+  }
+
+  .ftco-footer .ftco-footer-social {
+    display: flex;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+  }
+
+  .ftco-footer .ftco-footer-social li {
+    margin: 0;
+   }
+ }
+
+/* 480 and below */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .ftco-section {
+    padding: 3.5em 0;
+  }
+
+  .ftco-navbar-light,
+  .ftco-navbar-light.scrolled {
+    max-width: calc(100% - 14px);
+    padding: 8px 10px;
+    border-radius: 16px;
+  }
+
+  .ftco-navbar-light .navbar-brand {
+    max-width: calc(100% - 74px);
+  }
+
+  .ftco-navbar-light .navbar-brand > div:first-child {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.95rem !important;
+    border-radius: 10px !important;
+    margin-right: 8px !important;
+  }
+
+  .ftco-navbar-light .navbar-brand span:first-child {
+    font-size: 1.1rem !important;
+  }
+
+  .ftco-navbar-light .navbar-brand span:last-child {
+    font-size: 0.45rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  .hero-wrap.video-hero {
+    min-height: 560px;
+  }
+
+  .hero-wrap.video-hero .slider-text {
+    padding-top: 108px;
+    padding-bottom: 52px;
+  }
+
+  .hero-wrap.hero-wrap-2 {
+    height: 340px;
+  }
+
+  .hero-wrap.hero-wrap-2 .slider-text {
+    height: 340px;
+  }
+
+  .hero-wrap .slider-text h1 {
+    font-size: clamp(1.25rem, 5.5vw, 1.7rem);
+  }
+
+  .hero-wrap .slider-text p {
+    font-size: 0.85rem;
+  }
+
+  .hero-wrap .breadcrumbs {
+    font-size: 0.65rem !important;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px 16px !important;
+    font-size: 0.72rem;
+  }
+
+  #section-counter {
+    padding-top: 1.8em;
+    padding-bottom: 1em;
+  }
+
+  #section-counter .text .number,
+  #section-counter .text .counter-value .number,
+  #section-counter .text .counter-value .counter-suffix {
+    font-size: clamp(1.6rem, 7vw, 2.1rem);
+  }
+
+  #section-counter .text span {
+    font-size: 0.72rem;
+    line-height: 1.45;
+  }
+
+  .course,
+  .services,
+  .blog-entry,
+  .staff {
+    border-radius: 16px !important;
+  }
+
+  .ftco-footer {
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+  }
+
+  .ftco-footer .navbar-brand {
+    align-items: center !important;
+  }
+}

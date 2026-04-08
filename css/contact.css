@@ -136,12 +136,96 @@
   text-align: center;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1024px) {
   .contact-modern {
-    margin-top: -30px;
+    margin-top: -34px;
   }
 
   .contact-map {
-    height: 340px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-modern {
+    margin-top: -20px;
+  }
+
+  .contact-intro,
+  .contact-card,
+  .contact-side-body {
+    padding: 1.15rem;
+  }
+
+  .contact-intro h2 {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .contact-intro p,
+  .contact-side-body p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .contact-card h3 {
+    font-size: 1rem;
+  }
+
+  .contact-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+  }
+
+  .contact-map {
+    height: 320px;
+  }
+
+  .contact-links a {
+    padding: 0.72rem 0.78rem;
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-modern {
+    margin-top: -8px;
+  }
+
+  .contact-intro {
+    border-radius: 20px;
+  }
+
+  .contact-intro h2 {
+    font-size: 1.22rem;
+  }
+
+  .contact-card,
+  .contact-map-wrap,
+  .contact-side-wrap {
+    border-radius: 16px;
+  }
+
+  .contact-map-head,
+  .contact-side-head {
+    padding: 0.95rem 1rem;
+  }
+
+  .contact-map-head h4,
+  .contact-side-head h4 {
+    font-size: 0.95rem;
+  }
+
+  .contact-map {
+    height: 270px;
+  }
+
+  .contact-links {
+    gap: 0.45rem;
+  }
+
+  .contact-links a {
+    font-size: 0.88rem;
   }
 }
