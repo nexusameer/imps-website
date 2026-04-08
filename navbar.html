@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 900; margin: 0; padding: 0; text-decoration: none;">
+      <!-- Modern Logo Badge -->
+      <div class="d-flex justify-content-center align-items-center" style="width: 55px; height: 55px; border-radius: 16px; background: linear-gradient(135deg, var(--secondary), var(--primary)); box-shadow: 0 8px 20px rgba(224, 78, 159, 0.35); margin-right: 15px; color: white; font-size: 1.5rem; letter-spacing: 0; border: 2px solid rgba(255,255,255,0.2);">
+        IM
+      </div>
+      <!-- Logo Text -->
+      <div class="d-flex flex-column justify-content-center" style="line-height: 1;">
+        <span style="font-size: 1.8rem; color: var(--secondary); letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(11, 14, 55, 0.1);">P<span style="color: var(--primary);">S</span></span>
+        <span style="font-size: 0.65rem; color: #6b7280; letter-spacing: 2.5px; text-transform: uppercase; margin-top: 4px;">School</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="course.html" class="nav-link">Courses</a></li>
+        <!-- <li class="nav-item"><a href="teacher.html" class="nav-link">Our Teachers</a></li> -->
+        <li class="nav-item"><a href="event.html" class="nav-link">Events</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Simple script to set active menu item dynamically
+  $(document).ready(function () {
+    var path = window.location.pathname.split("/").pop();
+    if (path == '') {
+      path = 'index.html';
+    }
+    $('#ftco-nav .nav-item').removeClass('active');
+    $('#ftco-nav .nav-item a[href="' + path + '"]').parent().addClass('active');
+  });
+</script>

@@ -7,6 +7,44 @@
 
 	"use strict";
 
+	// Load Navbar and Footer Dynamically
+	$(document).ready(function(){
+		if ($('#navbar-placeholder').length) {
+			$('#navbar-placeholder').load('navbar.html?v=' + new Date().getTime(), function() {
+				// Rebind dropdown hover events for dynamically loaded navbar
+				$('nav .dropdown').hover(function(){
+					var $this = $(this);
+					$this.addClass('show');
+					$this.find('> a').attr('aria-expanded', true);
+					$this.find('.dropdown-menu').addClass('show');
+				}, function(){
+					var $this = $(this);
+					$this.removeClass('show');
+					$this.find('> a').attr('aria-expanded', false);
+					$this.find('.dropdown-menu').removeClass('show');
+				});
+				
+				// Rebind OnePageNav if needed
+				$(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function(e) {
+					e.preventDefault();
+					var hash = this.hash,
+							navToggler = $('.navbar-toggler');
+					$('html, body').animate({
+					scrollTop: $(hash).offset().top
+					}, 700, 'easeInOutExpo', function(){
+					window.location.hash = hash;
+					});
+					if ( navToggler.is(':visible') ) {
+						navToggler.click();
+					}
+				});
+			});
+		}
+		if ($('#footer-placeholder').length) {
+			$('#footer-placeholder').load('footer.html?v=' + new Date().getTime());
+		}
+	});
+
 	var isMobile = {
 		Android: function() {
 			return navigator.userAgent.match(/Android/i);

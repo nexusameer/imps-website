@@ -1,0 +1,249 @@
+/* Modern Etail/3D Theme Overrides */
+
+:root {
+  --primary: #E04E9F; /* Vibrant Magenta */
+  --secondary: #0B0E37; /* Deep Navy Blue */
+  --bg-light: #F4F5F7; /* Soft Off-White Background */
+  --text-dark: #1A1C29; /* Dark text for readability */
+  --clay-shadow: 0 20px 40px rgba(11, 14, 55, 0.08); /* Soft ambient shadow */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --border-radius-pill: 50px;
+  --border-radius-card: 24px;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: "Plus Jakarta Sans", "Inter", "Work Sans", Arial, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6, .heading {
+  color: var(--secondary) !important;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Base Buttons */
+.btn {
+  border-radius: var(--border-radius-pill) !important;
+  font-weight: 700;
+  padding: 12px 32px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  box-shadow: 0 10px 20px rgba(224, 78, 159, 0.2);
+  transition: all 0.3s ease;
+  border: none !important;
+}
+
+.btn-primary {
+  background-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(224, 78, 159, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--secondary) !important;
+  color: #fff !important;
+  box-shadow: 0 10px 20px rgba(11, 14, 55, 0.2);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(11, 14, 55, 0.4);
+}
+
+/* Floating Pill Navbar */
+.ftco-navbar-light {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--clay-shadow);
+  border-radius: var(--border-radius-pill);
+  margin: 20px auto !important;
+  max-width: 95%;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Incase it goes fixed/scrolled */
+.ftco-navbar-light.scrolled {
+  position: fixed;
+  top: 10px;
+  max-width: 95%;
+  left: 0;
+  right: 0;
+  border-radius: var(--border-radius-pill);
+  box-shadow: 0 15px 30px rgba(11, 14, 55, 0.1);
+  margin-top: 0 !important;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  color: var(--secondary) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border-radius: var(--border-radius-pill);
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover,
+.ftco-navbar-light .navbar-nav > .nav-item.active > .nav-link {
+  background-color: var(--primary) !important;
+  color: #fff !important;
+}
+
+/* Navbar Brand Logo */
+.navbar-brand img {
+  border-radius: 50%;
+}
+
+/* Video Hero Section */
+.hero-wrap.video-hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 800px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: var(--clay-shadow);
+}
+
+.hero-wrap.video-hero .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Soft white/gray overlay to make text pop while letting bright colors show */
+  background: rgba(244, 245, 247, 0.7) !important; 
+}
+
+.hero-wrap.video-hero .bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-wrap .slider-text h1 {
+  font-weight: 900;
+  color: var(--secondary) !important;
+  font-size: 4rem;
+}
+
+.hero-wrap .slider-text p.lead {
+  color: var(--secondary) !important;
+  font-weight: 500;
+}
+
+/* Claymorphic Cards */
+.course, .services, .blog-entry, .staff {
+  background: #fff !important;
+  border-radius: var(--border-radius-card) !important;
+  box-shadow: var(--clay-shadow) !important;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 4px solid #fff; /* Slight border effect for clay */
+}
+
+.course:hover, .services:hover, .blog-entry:hover, .staff:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(11, 14, 55, 0.12) !important;
+}
+
+.course .img, .blog-entry .block-20, .staff .img-wrap, .img-fluid.rounded {
+  border-radius: var(--border-radius-card) !important;
+}
+
+/* General images in sections */
+img.rounded {
+  border-radius: var(--border-radius-card) !important;
+  box-shadow: var(--clay-shadow);
+}
+
+/* Sections backgrounds */
+.bg-light {
+  background-color: var(--bg-light) !important;
+}
+.ftco-section {
+  padding: 6em 0;
+}
+
+/* Footer modern overhaul */
+.ftco-footer {
+  background: var(--secondary) !important;
+  color: #fff !important;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.ftco-footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(11, 14, 55, 0.95) !important;
+}
+.ftco-footer .ftco-footer-widget h2 {
+  color: #fff !important;
+}
+.ftco-footer a {
+  color: rgba(255,255,255,0.7) !important;
+}
+.ftco-footer a:hover {
+  color: var(--primary) !important;
+}
+
+/* Fix Hero Vertical Alignment */
+.hero-wrap.video-hero .container,
+.hero-wrap.video-hero .row {
+  height: 100%;
+}
+
+/* Floating Stats Section */
+#section-counter {
+  background: var(--secondary) !important;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 15px 30px rgba(11, 14, 55, 0.2);
+  width: 100%;
+  max-width: 100%;
+  padding: 4em 0;
+}
+
+#section-counter .text span, 
+#section-counter .text .number {
+  color: #fff !important;
+  margin-bottom: 0px !important;
+  display: block;
+}
+
+#section-counter .text .number {
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+#section-counter .text span {
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.9) !important;
+  margin-top: 10px;
+}
