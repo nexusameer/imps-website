@@ -25,6 +25,24 @@
 					}
 				});
 
+				// Keep ARIA state in sync for accessibility and icon animation.
+				$('#ftco-nav').on('shown.bs.collapse', function() {
+					$('.navbar-toggler').attr('aria-expanded', 'true');
+				});
+
+				$('#ftco-nav').on('hidden.bs.collapse', function() {
+					$('.navbar-toggler').attr('aria-expanded', 'false');
+				});
+
+				// Close menu when tapping outside the navbar on mobile.
+				$(document).on('click', function(event) {
+					var $target = $(event.target);
+					var isInsideNav = $target.closest('.ftco_navbar').length > 0;
+					if (!isInsideNav && $('.navbar-toggler').is(':visible') && $('#ftco-nav').hasClass('show')) {
+						$('.navbar-toggler').trigger('click');
+					}
+				});
+
 				// Rebind dropdown hover events for dynamically loaded navbar
 				$('nav .dropdown').hover(function(){
 					var $this = $(this);
