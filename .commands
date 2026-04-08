@@ -1,0 +1,1 @@
+GIT_SSH_COMMAND="ssh -i ~/.ssh/ameer" git push origin main
