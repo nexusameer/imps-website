@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#1a7a4a"/>
+  <!-- crescent: gold disc with green disc cut into it -->
+  <circle cx="30" cy="32" r="16" fill="#c9a227"/>
+  <circle cx="37" cy="29" r="14" fill="#1a7a4a"/>
+  <!-- star -->
+  <path d="M45 18 l2.2 5.4 5.8 .5 -4.4 3.8 1.4 5.7 -5-3.1 -5 3.1 1.4 -5.7 -4.4 -3.8 5.8 -.5 Z" fill="#e3c766"/>
+</svg>
