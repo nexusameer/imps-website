@@ -1,0 +1,335 @@
+/* ============================================================
+   Ideal Muslim Public School — Shared Stylesheet
+   Palette: deep Islamic green / gold / warm white
+   Fonts: Playfair Display (headings) + Inter (body)
+============================================================ */
+
+:root {
+  --imps-green: #1a7a4a;
+  --imps-green-dark: #135a37;
+  --imps-green-deep: #0e4429;
+  --imps-gold: #c9a227;
+  --imps-gold-soft: #e3c766;
+  --imps-bg: #f5fdf8;
+  --imps-white: #ffffff;
+  --imps-ink: #1d2b24;
+  --imps-muted: #5c6b63;
+}
+
+/* ---------- Base ---------- */
+* { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--imps-ink);
+  background-color: var(--imps-bg);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, .display-font {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+p { color: var(--imps-muted); }
+
+a { text-decoration: none; }
+
+.text-gold { color: var(--imps-gold) !important; }
+.text-green { color: var(--imps-green) !important; }
+.bg-green { background-color: var(--imps-green) !important; }
+.bg-cream { background-color: var(--imps-bg) !important; }
+
+/* ---------- Buttons ---------- */
+.btn-imps {
+  background-color: var(--imps-green);
+  color: #fff;
+  border: 2px solid var(--imps-green);
+  font-weight: 600;
+  padding: .65rem 1.6rem;
+  border-radius: 50px;
+  transition: all .25s ease;
+}
+.btn-imps:hover {
+  background-color: var(--imps-green-dark);
+  border-color: var(--imps-green-dark);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(19, 90, 55, .25);
+}
+
+.btn-gold {
+  background-color: var(--imps-gold);
+  color: #2a2208;
+  border: 2px solid var(--imps-gold);
+  font-weight: 600;
+  padding: .65rem 1.6rem;
+  border-radius: 50px;
+  transition: all .25s ease;
+}
+.btn-gold:hover {
+  background-color: var(--imps-gold-soft);
+  border-color: var(--imps-gold-soft);
+  color: #2a2208;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 162, 39, .3);
+}
+
+.btn-outline-light-imps {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.7);
+  font-weight: 600;
+  padding: .65rem 1.6rem;
+  border-radius: 50px;
+  transition: all .25s ease;
+}
+.btn-outline-light-imps:hover {
+  background-color: #fff;
+  color: var(--imps-green);
+  transform: translateY(-2px);
+}
+
+/* ---------- Navbar ---------- */
+.navbar-imps {
+  background-color: var(--imps-white);
+  border-bottom: 3px solid var(--imps-green);
+  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+}
+.navbar-imps .navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--imps-green);
+  font-size: 1.35rem;
+  line-height: 1.1;
+}
+.navbar-imps .navbar-brand .crescent { color: var(--imps-gold); }
+.navbar-imps .brand-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .5px;
+  color: var(--imps-muted);
+  text-transform: uppercase;
+}
+.navbar-imps .nav-link {
+  font-weight: 600;
+  color: var(--imps-ink);
+  margin: 0 .35rem;
+  position: relative;
+}
+.navbar-imps .nav-link:hover,
+.navbar-imps .nav-link.active {
+  color: var(--imps-green);
+}
+.navbar-imps .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: .65rem; right: .65rem; bottom: 2px;
+  height: 2px;
+  background: var(--imps-gold);
+  border-radius: 2px;
+}
+
+/* ---------- Islamic star pattern (hero texture) ---------- */
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.10' stroke-width='1.2'%3E%3Cpath d='M40 8 L48 32 L72 40 L48 48 L40 72 L32 48 L8 40 L32 32 Z'/%3E%3Cpath d='M40 20 L45 35 L60 40 L45 45 L40 60 L35 45 L20 40 L35 35 Z'/%3E%3Ccircle cx='40' cy='40' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+/* ---------- Hero (home) ---------- */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, var(--imps-green-deep) 0%, var(--imps-green) 55%, var(--imps-green-dark) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.hero .hero-inner { position: relative; z-index: 2; padding: 6rem 0; }
+.hero h1 { color: #fff; font-size: clamp(2.4rem, 5vw, 4rem); }
+.hero .tagline { color: var(--imps-gold-soft); font-size: 1.4rem; font-weight: 600; }
+.hero .subtitle { color: rgba(255,255,255,.85); font-size: 1.05rem; }
+.hero-glow {
+  position: absolute;
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(201,162,39,.25) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -120px; right: -120px;
+  z-index: 1;
+}
+
+/* ---------- Page banner (inner pages) ---------- */
+.page-banner {
+  position: relative;
+  background: linear-gradient(135deg, var(--imps-green-deep) 0%, var(--imps-green) 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.page-banner .banner-inner { position: relative; z-index: 2; padding: 4.5rem 0; }
+.page-banner h1 { color: #fff; font-size: clamp(2rem, 4vw, 3rem); }
+.page-banner .breadcrumb-imps a { color: var(--imps-gold-soft); }
+.page-banner .breadcrumb-imps span { color: rgba(255,255,255,.7); }
+
+/* ---------- Stats bar ---------- */
+.stats-bar {
+  background: var(--imps-white);
+  border-top: 4px solid var(--imps-gold);
+  margin-top: -3rem;
+  position: relative;
+  z-index: 3;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(14, 68, 41, .12);
+}
+.stat-item .stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--imps-green);
+}
+.stat-item .stat-label { color: var(--imps-muted); font-weight: 500; }
+.stat-item i { color: var(--imps-gold); }
+
+/* ---------- Section helpers ---------- */
+.section { padding: 5rem 0; }
+.section-title { color: var(--imps-green); margin-bottom: .5rem; }
+.section-eyebrow {
+  color: var(--imps-gold);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+.divider-gold {
+  width: 70px; height: 3px;
+  background: var(--imps-gold);
+  border-radius: 3px;
+  margin: 1rem auto 0;
+}
+.divider-gold.start { margin-left: 0; }
+
+/* ---------- Cards ---------- */
+.imps-card {
+  background: #fff;
+  border: 1px solid rgba(26,122,74,.08);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+  transition: all .3s ease;
+}
+.imps-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(14, 68, 41, .12);
+  border-color: rgba(201,162,39,.4);
+}
+.card-icon {
+  width: 64px; height: 64px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  background: var(--imps-bg);
+  color: var(--imps-green);
+  margin-bottom: 1.2rem;
+}
+.imps-card:hover .card-icon {
+  background: var(--imps-green);
+  color: #fff;
+}
+.imps-card h3, .imps-card h4 { color: var(--imps-green); }
+
+/* feature blocks (about) */
+.feature-block { text-align: center; padding: 1.5rem; }
+.feature-block .feature-icon {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--imps-green) 0%, var(--imps-green-dark) 100%);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px rgba(19,90,55,.2);
+}
+
+/* mission / vision cards */
+.mv-card {
+  border-radius: 16px;
+  padding: 2.5rem;
+  height: 100%;
+  color: #fff;
+}
+.mv-card .mv-icon {
+  width: 70px; height: 70px;
+  border-radius: 14px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 2rem; margin-bottom: 1.2rem;
+}
+.mv-mission { background: linear-gradient(135deg, var(--imps-green) 0%, var(--imps-green-deep) 100%); }
+.mv-vision  { background: linear-gradient(135deg, var(--imps-gold) 0%, #a8841d 100%); }
+.mv-card h3 { color: #fff; }
+.mv-card p { color: rgba(255,255,255,.9); }
+.mv-mission .mv-icon { background: rgba(255,255,255,.15); color: var(--imps-gold-soft); }
+.mv-vision .mv-icon  { background: rgba(255,255,255,.2); color: #fff; }
+
+/* ---------- Contact ---------- */
+.map-placeholder {
+  background: #e7ece9;
+  border: 2px dashed #b9c7bf;
+  border-radius: 14px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--imps-muted);
+}
+.contact-info-item i {
+  color: var(--imps-green);
+  font-size: 1.3rem;
+  margin-right: .75rem;
+}
+.form-control:focus {
+  border-color: var(--imps-green);
+  box-shadow: 0 0 0 .2rem rgba(26,122,74,.15);
+}
+.form-label { font-weight: 600; color: var(--imps-ink); }
+
+/* ---------- Footer ---------- */
+.footer-imps {
+  background: var(--imps-green-deep);
+  color: rgba(255,255,255,.8);
+  padding-top: 3.5rem;
+}
+.footer-imps h5 {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.2rem;
+}
+.footer-imps .footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 700;
+}
+.footer-imps .footer-brand .crescent { color: var(--imps-gold); }
+.footer-imps a { color: rgba(255,255,255,.8); transition: color .2s; }
+.footer-imps a:hover { color: var(--imps-gold-soft); }
+.footer-imps .footer-links li { margin-bottom: .5rem; list-style: none; }
+.footer-imps .footer-links { padding-left: 0; }
+.footer-imps .footer-contact i { color: var(--imps-gold); margin-right: .6rem; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  margin-top: 2.5rem;
+  padding: 1.2rem 0;
+  font-size: .9rem;
+  color: rgba(255,255,255,.6);
+}
+
+/* ---------- Misc ---------- */
+.lead-intro { font-size: 1.08rem; }
+.bg-pattern-soft {
+  background-color: var(--imps-bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%231a7a4a' stroke-opacity='0.04' stroke-width='1'%3E%3Cpath d='M30 6 L36 24 L54 30 L36 36 L30 54 L24 36 L6 30 L24 24 Z'/%3E%3C/g%3E%3C/svg%3E");
+}
